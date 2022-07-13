@@ -6,6 +6,12 @@ namespace IMC
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Digite seu nome: ");
+            string name = Console.ReadLine();
+
+            Console.WriteLine("Digite sua idade: ");
+            int age = Int32.Parse(Console.ReadLine());
+
             Console.WriteLine("Digite seu peso: ");
             float weight = float.Parse(Console.ReadLine());
 
@@ -14,6 +20,8 @@ namespace IMC
 
             float imc = weight / (height * height);
 
+            Console.WriteLine("\r\nOi, " + name);
+            Console.WriteLine("\r\nVocê tem " + age);
             Console.WriteLine("\r\nVocê pesa " + weight + "kg");
             Console.WriteLine("\r\nVocê mede " + height + "m");
             Console.WriteLine("\r\nSeu imc é " + Math.Round(imc, 2));
