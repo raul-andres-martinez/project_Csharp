@@ -15,7 +15,7 @@ namespace TabuadaApp
             {
                 int result = number * x;
                 Console.WriteLine("\r\n" + number + " X " + x + " = " + result);
-
+ 
             } 
 
         }
