@@ -6,30 +6,40 @@ using System.Threading.Tasks;
 
 namespace AnimaisApp
 {
-    public abstract class Animais
+    abstract class Animal
     {
-        public string Especie { get; }
+        public abstract string Comportamento();
+        public abstract string Tamanho();
+        public abstract string Cor();
+
         public string Nome { get; set; }
-        public int Idade { get; set; }        
-        public string Cor { get; set; }
 
-        public void Som() { } 
 
-        public void Comportamento () { }
 
-        protected Animais(string especie, string nome, int idade, string cor, string som, string comportamento)
-        {
-            Especie = especie;
-            Nome = nome;
-            Idade = idade;
-            Cor = cor;
-        }
-
-        public override string ToString()
-        {
-            return $"Nome: {Nome} | Espécie: {Especie} | Idade: {Idade} | Cor: {Cor}";
-        }
     }
-    
-}    
+    class Cachorro : Animal
+    {
+        public override string Comportamento() => "comer o sofá";
+        public override string Tamanho() => "médio";
+
+        public override string Cor() => "caramelo";
+
+    }
+
+    class Elefante : Animal
+    {
+        public override string Comportamento() => "brincar na lama";
+        public override string Tamanho() => "grande";
+
+        public override string Cor() => "cinza";
+
+    }
+
+    class Gato : Animal
+    {
+        public override string Comportamento() => "arranhar o sofá";
+        public override string Tamanho() => "pequeno";
+        public override string Cor() => "branco";
+    }
+}
 
